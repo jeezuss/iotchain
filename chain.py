@@ -36,11 +36,15 @@ class Chain(object):
       b.self_save()
     return True
 
+  #def find_block_by_index(self, index):
+   # if len(self) <= index:
+    #  return self.blocks[index]
+   # else:
+   #   return False
+
   def find_block_by_index(self, index):
-    if len(self) <= index:
-      return self.blocks[index]
-    else:
-      return False
+    if len(self) >= index:
+      return self.blocks[index].data
 
   def find_block_by_hash(self, hash):
     for b in self.blocks:
@@ -58,21 +62,6 @@ class Chain(object):
       if self_block != other_block:
         return False
     return True
-
-  def __ne__(self, other):
-    return not self.__eq__(other)
-
-  def __gt__(self, other):
-    return len(self.blocks) > len(other.blocks)
-
-  def __lt__(self, other):
-    return len(self.blocks) < len(other.blocks)
-
-  def __ge__(self, other):
-    return self.__eq__(other) or self.__gt__(other)
-
-  def __le__(self, other):
-    return self.__eq__(other) or self.__lt__(other)
 
   def most_recent_block(self):
     return self.blocks[-1]

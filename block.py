@@ -59,23 +59,5 @@ class Block(object):
     else:
       return False
 
-  def __repr__(self):
-    return "Block<index: %s>, <hash: %s>" % (self.index, self.hash)
 
-  def __eq__(self, other):
-    return (self.index == other.index and
-       self.timestamp == other.timestamp and
-       self.prev_hash == other.prev_hash and
-       self.hash == other.hash and
-       self.data == other.data and
-       self.nonce == other.nonce)
-
-  def __ne__(self, other):
-    return not self.__eq__(other)
-
-  def __gt__(self, other):
-    return self.timestamp < other.timestamp
-
-  def __lt__(self, other):
-    return self.timestamp > other.timestamp
 
