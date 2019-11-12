@@ -70,5 +70,5 @@ if __name__ == '__main__':
   sched.start() #want this to start so we can validate on the schedule and not rely on Flask
 
   #now we know what port to use
-  node.run(host='localhost', port=args.port)
+  node.run(host='10.0.45.150', port=args.port)
 

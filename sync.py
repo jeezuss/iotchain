@@ -48,6 +48,11 @@ def sync_overall(save=False):
     best_chain.self_save()
   return best_chain
 
+def test(save=False):
+  chain = sync_local()
+  return(chain)
+
 def sync(save=False):
   return sync_overall(save=save)
+
 

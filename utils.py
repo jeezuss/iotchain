@@ -35,9 +35,8 @@ def create_new_block_from_prev(prev_block=None, data=None, timestamp=None):
     prev_hash = prev_block.hash
 
   if not data:
-    filename = '%sdata.txt' % (CHAINDATA_DIR)
-    with open(filename, 'r') as data_file:
-      data = data_file.read()
+    data = DATACH
+
 
   if not timestamp:
     timestamp = datetime.datetime.utcnow().strftime('%Y%m%d%H%M%S%f')

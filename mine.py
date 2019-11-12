@@ -108,7 +108,7 @@ def validate_possible_block(possible_block_dict):
 
 if __name__ == '__main__':
 
-  sched.add_job(mine_for_block, kwargs={'rounds':STANDARD_ROUNDS, 'start_nonce':0}, id='mining') #add the block again
+  sched.add_job(mine_for_block, kwargs={'rounds':STANDARD_ROUNDS, 'start_nonce':0}, id='mining' ) #add the block again
   sched.add_listener(mine_for_block_listener, apscheduler.events.EVENT_JOB_EXECUTED)
   sched.start()
 
