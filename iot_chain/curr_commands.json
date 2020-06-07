@@ -1,0 +1,1 @@
+{"1": {"from": "node2", "to": "node2", "command": "http://192.168.1.2:8123/api/states/sensor.cpu_temp"}, "2": {"from": "node2", "to": "node2", "reply": "61.224000000000004"}}
