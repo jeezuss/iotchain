@@ -1,0 +1,1 @@
+{"1": {"node": "node1", "com": "test"}, "2": {"node": "node1", "com": "http://192.168.1.2:8123/api/states/sensor.cpu_temp"}, "3": {"node": "node2", "com": "http://192.168.1.2:8123/api/states/sensor.cpu_temp"}}
